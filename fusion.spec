@@ -1,6 +1,6 @@
 
 %define name	fusion
-%define version	3.2.1
+%define version	3.2.3
 %define rel	1
 
 %define tarball	linux-fusion-%version
@@ -63,7 +63,7 @@ cat > %{buildroot}/usr/src/%{name}-%{version}-%{release}/dkms.conf <<EOF
 PACKAGE_NAME="%{name}"
 PACKAGE_VERSION="%{version}-%{release}"
 
-MAKE[0]="make KERNEL_PATCHLEVEL=\$(echo \$kernelver | cut -d . -f 2) KERNEL_SOURCE=\$kernel_source_dir KERNEL_BUILD=\$kernel_source_dir"
+MAKE[0]="make KERNEL_VERSION=\$kernelver KERNEL_SOURCE=\$kernel_source_dir KERNEL_BUILD=\$kernel_source_dir"
 BUILT_MODULE_LOCATION[0]="linux/drivers/char/fusion"
 BUILT_MODULE_NAME[0]="fusion"
 DEST_MODULE_LOCATION[0]="/kernel/drivers/char/fusion"
@@ -92,5 +92,3 @@ true
 %defattr(-,root,root,-)
 %doc ChangeLog README TODO doc/fusion.pdf
 %{_includedir}/linux/fusion.h
-
-
