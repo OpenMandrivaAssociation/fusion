@@ -1,6 +1,6 @@
 
 %define name	fusion
-%define version	3.2.3
+%define version	7.0.1
 %define rel	1
 
 %define tarball	linux-fusion-%version
@@ -11,7 +11,7 @@ Version:	%version
 Release:	%mkrel %rel
 License:	GPL
 Group:		System/Kernel and hardware
-Source0:	http://www.directfb.org/downloads/Core/%tarball.tar.bz2
+Source0:	http://www.directfb.org/downloads/Core/%tarball.tar.gz
 URL:		http://www.directfb.org/
 BuildArch:	noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root/
@@ -75,9 +75,9 @@ EOF
 rm -rf %{buildroot}
 
 %post -n dkms-%name
-dkms add     -m %{name} -v %{version}-%{release} --rpm_safe_upgrade
-dkms build   -m %{name} -v %{version}-%{release} --rpm_safe_upgrade
-dkms install -m %{name} -v %{version}-%{release} --rpm_safe_upgrade
+dkms add     -m %{name} -v %{version}-%{release} --rpm_safe_upgrade &&
+dkms build   -m %{name} -v %{version}-%{release} --rpm_safe_upgrade &&
+dkms install -m %{name} -v %{version}-%{release} --rpm_safe_upgrade --force
 true
 
 %preun -n dkms-%name
