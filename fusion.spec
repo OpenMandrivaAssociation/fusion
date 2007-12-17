@@ -14,7 +14,6 @@ Group:		System/Kernel and hardware
 Source0:	http://www.directfb.org/downloads/Core/%tarball.tar.gz
 URL:		http://www.directfb.org/
 BuildArch:	noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root/
 
 %description
 Source package to build Fusion kernel module for DKMS and
