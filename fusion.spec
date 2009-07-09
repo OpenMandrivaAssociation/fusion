@@ -1,6 +1,6 @@
 
 %define name	fusion
-%define version	7.0.1
+%define version	8.1.1
 %define rel	1
 
 %define tarball	linux-fusion-%version
