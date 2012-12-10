@@ -92,3 +92,47 @@ true
 %defattr(-,root,root,-)
 %doc ChangeLog README TODO doc/fusion.pdf
 %{_includedir}/linux/fusion.h
+
+
+%changelog
+* Thu Jul 09 2009 Anssi Hannula <anssi@mandriva.org> 8.1.1-1mdv2010.0
++ Revision: 393968
+- new version
+
+* Wed Jan 02 2008 Olivier Blin <oblin@mandriva.com> 7.0.1-1mdv2008.1
++ Revision: 140731
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Wed Sep 05 2007 Anssi Hannula <anssi@mandriva.org> 7.0.1-1mdv2008.0
++ Revision: 80155
+- 7.0.1
+- do not run next dkms step in %%post if one fails
+
+* Sat May 19 2007 Anssi Hannula <anssi@mandriva.org> 3.2.3-1mdv2008.0
++ Revision: 28380
+- 3.2.3
+- adjustments to dkms make command
+
+
+* Sat Feb 03 2007 Anssi Hannula <anssi@mandriva.org> 3.2.1-1mdv2007.0
++ Revision: 116075
+- 3.2.1
+- add requires(post), requires(preun), disable aborts in post and preun
+
+* Fri Nov 03 2006 Anssi Hannula <anssi@mandriva.org> 3.2-1mdv2007.1
++ Revision: 76320
+- 3.2
+- Import fusion
+
+* Fri Aug 25 2006 Anssi Hannula <anssi@mandriva.org> 3.0-2mdv2007.0
+- fix building dkms module for non-running kernels
+
+* Sat May 06 2006 Anssi Hannula <anssi@mandriva.org> 3.0-1mdk
+- 3.0
+
+* Thu Dec 22 2005 Anssi Hannula <anssi@mandriva.org> 1.1-1mdk
+- initial Mandriva package
+
