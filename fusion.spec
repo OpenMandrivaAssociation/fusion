@@ -12,7 +12,7 @@ Release:	%mkrel %rel
 License:	GPL
 Group:		System/Kernel and hardware
 Source0:	http://www.directfb.org/downloads/Core/%tarball.tar.gz
-URL:		http://www.directfb.org/
+URL:		https://www.directfb.org/
 BuildArch:	noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root/
 
